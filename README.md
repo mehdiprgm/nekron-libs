@@ -30,16 +30,6 @@ Install project into local repository
 ```
 
 
-## Contributing
-
-Contributions are always welcome!
-
-
-## License
-
-[Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0)
-
-
 ## 🚀 About Me
 Mobile Fullstack Developer
 
