@@ -8,13 +8,13 @@
 extern "C" {
 
 JNIEXPORT void JNICALL
-Java_com_emperor_nekron_lib_terminal_natives_WindowsTerminalController_nativeClearScreen(
+Java_com_emperor_nekron_libs_terminal_natives_WindowsTerminalController_nativeClearScreen(
     JNIEnv* env, jobject obj) {
   system("cls");
 }
 
 JNIEXPORT void JNICALL
-Java_com_emperor_nekron_lib_terminal_natives_WindowsTerminalController_nativeGotoxy(
+Java_com_emperor_nekron_libs_terminal_natives_WindowsTerminalController_nativeGotoxy(
     JNIEnv* env, jobject obj, jint x, jint y) {
   COORD coord;
   coord.X = (SHORT)x;
@@ -23,7 +23,7 @@ Java_com_emperor_nekron_lib_terminal_natives_WindowsTerminalController_nativeGot
 }
 
 JNIEXPORT jint JNICALL
-Java_com_emperor_nekron_lib_terminal_natives_WindowsTerminalController_nativeReadKey(
+Java_com_emperor_nekron_libs_terminal_natives_WindowsTerminalController_nativeReadKey(
     JNIEnv* env, jobject obj, jboolean show) {
   if (show) {
     return getche();
@@ -33,7 +33,7 @@ Java_com_emperor_nekron_lib_terminal_natives_WindowsTerminalController_nativeRea
 }
 
 JNIEXPORT jint JNICALL
-Java_com_emperor_nekron_lib_terminal_natives_WindowsTerminalController_getCursorXPosition(
+Java_com_emperor_nekron_libs_terminal_natives_WindowsTerminalController_getCursorXPosition(
     JNIEnv* env, jobject obj) {
   CONSOLE_SCREEN_BUFFER_INFO csbi;
   GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
@@ -42,7 +42,7 @@ Java_com_emperor_nekron_lib_terminal_natives_WindowsTerminalController_getCursor
 }
 
 JNIEXPORT jint JNICALL
-Java_com_emperor_nekron_lib_terminal_natives_WindowsTerminalController_getCursorYPosition(
+Java_com_emperor_nekron_libs_terminal_natives_WindowsTerminalController_getCursorYPosition(
     JNIEnv* env, jobject obj) {
   CONSOLE_SCREEN_BUFFER_INFO csbi;
   GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi);
@@ -51,7 +51,7 @@ Java_com_emperor_nekron_lib_terminal_natives_WindowsTerminalController_getCursor
 }
 
 JNIEXPORT jint JNICALL
-Java_com_emperor_nekron_lib_terminal_natives_WindowsTerminalController_getWindowWidth(
+Java_com_emperor_nekron_libs_terminal_natives_WindowsTerminalController_getWindowWidth(
     JNIEnv* env, jobject obj) {
   CONSOLE_SCREEN_BUFFER_INFO csbi;
   if (GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi)) {
@@ -62,7 +62,7 @@ Java_com_emperor_nekron_lib_terminal_natives_WindowsTerminalController_getWindow
 }
 
 JNIEXPORT jint JNICALL
-Java_com_emperor_nekron_lib_terminal_natives_WindowsTerminalController_getWindowHeight(
+Java_com_emperor_nekron_libs_terminal_natives_WindowsTerminalController_getWindowHeight(
     JNIEnv* env, jobject obj) {
   CONSOLE_SCREEN_BUFFER_INFO csbi;
   if (GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &csbi)) {
