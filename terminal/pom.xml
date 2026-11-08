@@ -11,6 +11,7 @@
 
     <groupId>com.emperor.nekron.libs</groupId>
     <artifactId>terminal</artifactId>
+    <version>2.0</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
