@@ -22,27 +22,27 @@ public class TerminalInput {
     private boolean echo;
     private int maxLength;
 
-    private static final int KEY_ENTER = 10;
-    private static final int KEY_TAB = 9;
-    private static final int KEY_BACKSPACE = 127;
-    private static final int KEY_ESCAPE = 27;
+    public static final int KEY_ENTER = 10;
+    public static final int KEY_TAB = 9;
+    public static final int KEY_BACKSPACE = 127;
+    public static final int KEY_ESCAPE = 27;
 
     // ANSI Constants
-    private static final String ANSI_RIGHT = "\033[C";
-    private static final String ANSI_LEFT = "\033[D";
-    private static final String ANSI_HOME = "\033[H";
-    private static final String ANSI_END = "\033[F";
-    private static final String ANSI_DELETE = "\033[3~";
+    public static final String ANSI_RIGHT = "\033[C";
+    public static final String ANSI_LEFT = "\033[D";
+    public static final String ANSI_HOME = "\033[H";
+    public static final String ANSI_END = "\033[F";
+    public static final String ANSI_DELETE = "\033[3~";
 
     // Windows Special Key Identifiers
-    private static final int KEY_SPECIAL_PREFIX = 224; // 0xE0
-    private static final int KEY_SPECIAL_PREFIX_ALT = 0;  // 0x00
+    public static final int KEY_SPECIAL_PREFIX = 224; // 0xE0
+    public static final int KEY_SPECIAL_PREFIX_ALT = 0;  // 0x00
 
-    private static final int WIN_KEY_RIGHT = 77;
-    private static final int WIN_KEY_LEFT = 75;
-    private static final int WIN_KEY_HOME = 71;
-    private static final int WIN_KEY_END = 79;
-    private static final int WIN_KEY_DELETE = 83;
+    public static final int WIN_KEY_RIGHT = 77;
+    public static final int WIN_KEY_LEFT = 75;
+    public static final int WIN_KEY_HOME = 71;
+    public static final int WIN_KEY_END = 79;
+    public static final int WIN_KEY_DELETE = 83;
 
     private int handleAnsiSpecialKeys(String sequence, StringBuilder result, int cursor, String message, int startX, int startY) {
         switch (sequence) {
