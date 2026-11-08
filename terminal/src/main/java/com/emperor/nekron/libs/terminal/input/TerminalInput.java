@@ -22,9 +22,9 @@ public class TerminalInput {
     private boolean echo;
     private int maxLength;
 
-    public static final int KEY_ENTER = 10;
+    public static final int KEY_ENTER = 13;
     public static final int KEY_TAB = 9;
-    public static final int KEY_BACKSPACE = 127;
+    public static final int KEY_BACKSPACE = 8;
     public static final int KEY_ESCAPE = 27;
 
     // ANSI Constants
